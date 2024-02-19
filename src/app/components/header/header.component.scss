@@ -1,0 +1,61 @@
+.heading {
+    display: flex;
+    background-color: darkseagreen;
+}
+h2 {
+    color: white;
+    font-weight: 600;
+    margin-left: 5%;
+    margin-top: 3px;
+}
+header {
+    margin-left: auto;
+    margin-right: 20%;
+    margin-top: 12px;
+}
+ul.list {
+    display: flex;
+    gap: 30px;
+}
+li {
+    list-style-type: none;
+}
+a.a-tag {
+    text-decoration: none;
+    margin-left: 35px;
+    cursor: pointer;
+}
+p.email {
+    color: white;
+    margin: 14px 10px 2px 25px;
+}
+a.a1 {
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    font-weight: 600;
+}
+a.a1:hover {
+    background-color: white;
+    color: darkseagreen;
+    cursor: pointer;
+}
+
+a.a1.active-link {
+    background: white;
+    color: rgb(143, 188, 143);
+}
+
+button.btn-1 {
+    border: none;
+    margin-right: 26px;
+    border-radius: 40px;
+    margin-top: 5px;
+    color: darkseagreen;
+    font-weight: 600;
+    padding: 3px 8px 3px 8px;
+}
+button.btn-1:hover {
+    color: white;
+    background-color: rgb(104, 185, 104);
+}

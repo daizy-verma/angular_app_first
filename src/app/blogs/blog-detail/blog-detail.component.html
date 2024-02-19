@@ -1,0 +1,23 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card" *ngIf="selectedData">
+          <img class="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/pasta.jpg" >
+         <div class="card-body">
+            <h4 class="card-title">{{ selectedData.title }}</h4>
+            <small class="text-muted cat">
+              <i class="far fa-clock text-info"></i>{{ selectedData.userId }}
+            </small>
+            <p class="card-text">{{ selectedData.content }}</p>
+          </div>
+          <div>
+            <a class="btn btn-light btn-sm">{{ selectedData.body }}</a>
+          </div>
+          <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+            <div class="views">{{ selectedData.date }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

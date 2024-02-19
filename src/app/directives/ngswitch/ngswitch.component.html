@@ -1,0 +1,19 @@
+<h2>ngSwitch Example</h2>
+
+<div class="outer">
+    <div class="red" [ngClass]="{ 'red': color === 'red' }"></div>
+    <div class="blue" [ngClass]="{ 'blue': color === 'blue' }"></div>
+    <div class="green" [ngClass]="{ 'green': color === 'green' }"></div>
+</div>
+
+
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'">This is red.</p>
+    <p *ngSwitchCase="'blue'">This is blue.</p>
+    <p *ngSwitchCase="'green'">This is green.</p>
+    <p *ngSwitchDefault>Invalid color.</p>
+</div>
+
+<button  class="red" (click)="changeColor('red')">Red</button>
+<button  class="blue" (click)="changeColor('blue')">Blue</button>
+<button  class="green" (click)="changeColor('green')">Green</button>

@@ -1,0 +1,32 @@
+<div class="container">
+    <form #loginForm="ngForm" (ngSubmit)="submit(loginForm.value)" autocomplete="off">
+        <h1>LogIn</h1>
+        <div class="row">
+            <div class="form-group mt-3">
+                <input type="text" name="email" class="form-control" 
+                       [(ngModel)]="user.email" id="email" placeholder="Username" required>
+                       <div *ngIf="loginForm.controls['email']?.hasError('required') && loginForm.controls['email'].touched">
+                        Username is required.
+                      </div>
+            </div>
+            <div class="form-group mt-3">
+                <input type="password" name="password" class="form-control" autocomplete="false"
+                       [(ngModel)]="user.password" id="password" placeholder="Enter your Password" required>
+                       <div *ngIf="loginForm.controls['password']?.hasError('required') && loginForm.controls['password'].touched">
+                        Password is required.
+                      </div>
+            </div>
+            <div class="form-group mt-3">
+                <select name="gender" class="form-control" [(ngModel)]="user.gender" id="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+            </div>
+        </div>
+        <div class="btn">
+            <button [disabled]="loginForm.invalid" class="btn-1" type="submit">Login</button>
+        </div>
+    </form>
+</div>

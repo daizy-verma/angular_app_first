@@ -1,0 +1,37 @@
+<div class="container">
+    <ul>
+        <li>Date pipe
+            <p>{{date | date: 'medium'}}</p>
+        </li>
+        <li>Currency pipe
+            <p>{{ currencyValue | currency:'USD':'symbol' }}</p>
+        </li>
+        <li>Decimal pipe
+            <p>{{ decimalValue | number:'1.4-4' }}</p>
+        </li>
+        <li>Json pipe
+            <p>{{ jsonData | json }}</p>
+        </li>
+        <li>Lowercase pipe
+            <p>{{originalText | lowercase}}</p>
+        </li>
+        <li>upperercase pipe
+            <p>{{originalText | uppercase}}</p>
+        </li>
+        <li>Percent pipe
+            <p>{{decimalValue | percent}}</p>
+        </li>
+        <li>Slice pipe
+            <p *ngFor="let number of originalArray | slice:2:6">{{number}} </p>
+        </li>
+        <li>Slice pipe in another way
+            <p *ngFor="let n of slicedArray">{{n}}</p>
+        </li>
+        <li>Slice pipe in string
+            <p>{{originalString | slice:10}}</p>
+        </li>
+        <li>
+            <p *ngFor="let number of nameArray">{{number | text2num}}</p>
+        </li>
+    </ul>
+</div>

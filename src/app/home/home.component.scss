@@ -1,0 +1,50 @@
+.content {
+    background-color: #87b787;
+    display: flex;
+}
+.container {
+    margin-left: 32px;
+    margin-top: 20%;
+}
+h1.h1 {
+    color: white;
+    font-weight: bolder;
+}
+p.h1-para {
+    color: white;
+}
+img.img-hero {
+    float: right;
+    width: 550px;
+    height: 650px;
+    margin-right: 15px;
+}
+.btn {
+    display: flex;
+    gap: 10px;
+}
+button.btn-1 {
+    border-radius: 40px;
+    border: 2px solid silver;
+    background-color: darkseagreen;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    font-weight: 600;
+}
+button.btn-1:hover {
+    border: 2px solid #d9cbcb;
+}
+.icon-1 {
+    display: flex;
+}
+i.fa-regular.fa-circle-play {
+    margin: 10px;
+    color: white;
+    font-size: x-large;
+}
+p.icon-para {
+    color: white;
+    margin-top: 10px;
+    font-weight: 600;
+}

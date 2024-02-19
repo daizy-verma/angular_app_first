@@ -1,0 +1,19 @@
+<div class="heading">
+    <a class="a-tag" routerLink="/home">
+      <h2>Impact</h2>
+    </a>
+    <p class="email" *ngIf="user?.email">{{user.email}}</p>
+      <header>
+        <ul class="list">
+          <li><a class="a1" routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+          <li><a class="a1" routerLink="/about" routerLinkActive="active-link" >About</a></li>
+          <li><a class="a1" routerLink="/services" routerLinkActive="active-link">Services</a></li>
+          <li><a class="a1" routerLink="/contact" routerLinkActive="active-link">Contact</a></li>
+          <li><a class="a1" routerLink="/register">Register</a></li>
+          <li><a class="a1" routerLink="/">LogIn</a></li>
+      </ul>
+      </header>
+      <div class="btn">
+        <button class="btn-1" (click)="logout()">Logout</button>
+      </div>
+  </div>

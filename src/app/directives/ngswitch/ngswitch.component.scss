@@ -1,0 +1,31 @@
+// .outer {
+//     height: 200px;
+//     width: 200px;
+//     border: 1px solid grey;
+//     border-radius: 20px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     color: white;
+// }
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    font-weight: 600;
+}

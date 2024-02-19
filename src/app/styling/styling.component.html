@@ -1,0 +1,9 @@
+<div class="container">
+    <h2 class="mb-5">ngStyle</h2>
+    <div class="outer">
+        <div class="box1" [ngClass]="{'active': box1}" (click)="toggleBoxColor()"></div>
+        <div class="box2" [ngClass]="{'active': !box1}" (click)="toggleBoxColor()"></div>
+        <!-- <div class="box1" [class.active]="box1"></div>
+        <div class="box2" [class.active]="!box1"></div> -->
+    </div>
+</div>

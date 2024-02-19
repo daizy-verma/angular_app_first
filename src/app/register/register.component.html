@@ -1,0 +1,62 @@
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="submit(myForm)">
+        <h1>Registration Form</h1>
+        <div class="row">
+            <div class="form-group mt-3">
+                <input type="text" name="name" formControlName="name" class="form-control" id="name" placeholder="Enter your Name" required>
+            </div>
+            <div *ngIf="myForm.get('name').invalid && (myForm.get('name').dirty || myForm.get('name').touched)">
+                Please provide a name.
+              </div>
+            <div class="form-group mt-3">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Father Name">
+            </div>
+            <div class="form-group mt-3">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Mother Name">
+            </div>
+            <div class="form-group mt-3">
+                <input type="email" name="email"formControlName="email" class="form-control" id="email" placeholder="Enter your Email" required>
+            </div>
+            <div *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)">
+                Please provide a valid email address.
+              </div>
+            <div class="form-group mt-3">
+                <input type="text" name="password" formControlName="password" class="form-control" id="password" placeholder="Enter your Password" required>
+            </div>
+            <div *ngIf="myForm.get('password').invalid && (myForm.get('password').dirty || myForm.get('password').touched)">
+                Password must be at least 8 characters long.
+              </div>
+            <!-- <div class="form-group mt-3">
+                <input type="datetime-local" name="datetime-local" class="form-control" id="datetime-local" placeholder="Date of Birth" required>
+            </div>
+            <div class="form-group mt-3">
+                <input type="text" name="qualification" class="form-control" id="qualification" placeholder="Qualification">
+            </div> -->
+            <div class="form-group mt-3">
+                <select name="gender" formControlName="gender" class="form-control" id="gender" placeholder="Select your Gender" required>
+                    <option value="" disabled>Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Female">Other</option>
+                </select>
+            </div>
+            <!-- <div class="form-group mt-3">
+                <label for="gender">Gender</label>
+                <select formControlName="gender" class="form-control" id="gender" required>
+                    <option value="" disabled selected>Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <div *ngIf="myForm.get('gender').invalid && (myForm.get('gender').dirty || myForm.get('gender').touched)">
+                    Please select a gender.
+                </div>
+            </div> -->
+        </div>
+        <div class="btn">
+            <button class="btn-1" type="submit" [disabled]="myForm.invalid">Register</button>
+        </div>
+
+    </form>
+   
+    
+</div>

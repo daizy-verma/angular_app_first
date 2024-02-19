@@ -1,0 +1,37 @@
+ <ul class="list-group list-group-horizontal rounded-0 bg-transparent" *ngFor="let list of taskList; let i=index">
+    <li
+      class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
+      <div class="form-check">
+        <input class="form-check-input me-0" [ngModel]="list.isCompleted" type="checkbox" value="" id="flexCheckChecked1"
+          aria-label="..." checked />
+      </div>
+    </li>
+    <li
+      class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
+      <p [routerLink]="['detail',list.id]" class="lead fw-normal mb-0">{{list.title}}</p>
+    </li>
+    <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
+      <div class="d-flex flex-row justify-content-end mb-1">
+        <a  (click)="onEditTask(list)" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
+            class="fas fa-pencil-alt me-3"></i></a>
+        <a (click)="deleteTodo(i)" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
+            class="fas fa-trash-alt"></i></a>
+      </div>
+      <div class="text-end text-muted">
+        <a  class="text-muted" data-mdb-toggle="tooltip" title="Created date">
+          <p class="small mb-0"><i class="fas fa-info-circle me-2"></i>{{list.date | date:"shortDate" }}</p>
+        </a>
+      </div>
+    </li>
+  </ul>
+  
+  <div *ngIf="editingTodo">
+    <h3>Edit Todo</h3>
+    <form (submit)="saveEditedTodo()">
+      <label for="editedTitle">Title:</label>
+      <input id="editedTitle" [(ngModel)]="editedTodo.title" name="editedTitle" required>
+      <label for="editedCompleted">Completed:</label>
+      <input id="editedCompleted" [(ngModel)]="editedTodo.isCompleted" name="editedCompleted" type="checkbox">
+      <button type="submit">Save</button>
+    </form>
+  </div>

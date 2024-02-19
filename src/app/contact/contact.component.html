@@ -1,0 +1,72 @@
+<div class="container">
+    <h1 class="main-heading">Contact</h1>
+<p class="head-text">Lorem ipsum dolor sit amet consectetur elit. Deserunt  quidem placeat asperiores tenetur sed  reprehenderit sunt odit.</p>
+<div class="row">
+    <div class="col-lg-4">
+       <div class="inner-container">
+        <div class="icon-form">
+            <i class="fa-solid fa-location-crosshairs"></i>
+        </div>
+        <div class="text">
+            <h4 class="form-heading">Location:</h4>
+            <p>A108 Adam Street, New York, NY 535022</p>
+        </div>
+       </div>
+       <div class="inner-container">
+        <div class="icon-form">
+            <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div class="text">
+            <h4 class="form-heading">Email:</h4>
+            <p>info@example.com</p>
+        </div>
+       </div>
+       <div class="inner-container">
+        <div class="icon-form">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <div class="text">
+            <h4 class="form-heading">Call:</h4>
+            <p>+1 5589 55488 55</p>
+        </div>
+       </div>
+       <div class="inner-container">
+        <div class="icon-form">
+            <i class="fa-sharp fa-solid fa-clock"></i>
+        </div>
+        <div class="text">
+            <h4 class="form-heading">Open Hours:</h4>
+            <p>Mon-Sat: 11AM-23PM</p>
+        </div>
+       </div>
+    </div>
+    <div class="col-lg-8">
+        <form [formGroup]="myForm" (ngSubmit)="submit(myForm)">
+            <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                    <input type="text" name="name" formControlName="name" class="form-control" id="name" placeholder="Enter your Name" required>
+                </div>
+                <div *ngIf="myForm.get('name').invalid && (myForm.get('name').dirty || myForm.get('name').touched)">
+                    Please provide a name.
+                  </div>
+                <div class="col-md-6 form-group mt-3">
+                    <input type="email" name="email" formControlName="email" class="form-control" id="email" placeholder="Enter your Email" required>
+                </div>
+                <div *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)">
+                    Please provide a valid email address.
+                  </div>
+                <div class="form-group mt-3">
+                    <input type="subject" name="subject" formControlName="subject" class="form-control" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                    <textarea name="message" formControlName="message" class="form-control" rows="7"  placeholder="Message" required></textarea>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="btn-1" type="submit" [disabled]="myForm.invalid">Send Message</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    <p class="head-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolores, repellendus accusamus dolorum labore minima ipsa.</p>
+</div>

@@ -10,10 +10,10 @@
           <li><a class="a1" routerLink="/services" routerLinkActive="active-link">Services</a></li>
           <li><a class="a1" routerLink="/contact" routerLinkActive="active-link">Contact</a></li>
           <li><a class="a1" routerLink="/register">Register</a></li>
-          <li><a class="a1" routerLink="/">LogIn</a></li>
+          <li *ngIf="!user"><a class="a1" routerLink="/">LogIn</a></li>
       </ul>
       </header>
-      <div class="btn">
+      <div class="btn" *ngIf="user">
         <button class="btn-1" (click)="logout()">Logout</button>
       </div>
   </div>

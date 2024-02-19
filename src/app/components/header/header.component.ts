@@ -38,6 +38,7 @@ export class HeaderComponent implements OnInit {
     
     if (userData) {
     this.user = JSON.parse(userData);
+console.log(this.user);
 
     }
   }

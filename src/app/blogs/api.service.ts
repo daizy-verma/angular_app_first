@@ -7,6 +7,12 @@ import { Blog } from './models/post.model';
   providedIn: 'root'
 })
 export class ApiService {
+postData(data: {
+  name: string; // addPost(post: Blog): Observable<Blog> {
+  email: string; company: string; password: string; phoneNumber: string;
+}) {
+  throw new Error('Method not implemented.');
+}
 blogUrl: string="https://jsonplaceholder.typicode.com/posts";
 
 
